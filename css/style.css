@@ -574,50 +574,29 @@ header {
   }
 
   .card_stats {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 12px;
-    width: 100%;
-    align-items: flex-start;
-  }
-
-  .card_stats > .stat {
-    flex: 0 1 auto;
-    min-width: 0;
-    gap: 6px;
-  }
-
-  .card_stats > .stat .stat_header {
-    margin-bottom: 4px;
-  }
-
-  .card_stats > .stat .stat_title {
-    font-size: 14px;
-    white-space: nowrap;
-  }
-
-  .card_stats > .stat .stat_metrics {
+    flex-direction: column;
     gap: 10px;
   }
 
-  .card_stats > .stat .metric {
-    gap: 4px;
-  }
-
-  .card_stats > .stat .metric_icon {
-    width: 16px;
-    height: 16px;
-  }
-
-  .card_stats > .stat .metric_value {
-    font-size: 13px;
-  }
-
   .card_stats > .upload_info {
-    flex-basis: 100%;
-    margin-top: 8px;
-    padding-top: 8px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .stat {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .stat_header {
+    min-height: auto;
+  }
+
+  .stat_metrics {
+    display: flex;
+    flex-direction: row;
   }
 
   .cards_net {
@@ -735,7 +714,8 @@ header {
   }
 
   .card_stats {
-    gap: 50px;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .card_stats > .upload_info {
@@ -745,10 +725,16 @@ header {
 
   .stat {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 12px;
+  }
+  
+  .stat_header {
+    min-height: auto;
   }
   .stat_metrics {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 }

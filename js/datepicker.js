@@ -21,9 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
           selectedDates.finish = null;
           finishInput.value = '';
         }
+        startDatepicker.hide();
       }
     },
     isMobile: false,
+    onShow: () => {
+      finishDatepicker.hide();
+    },
   });
 
   const finishDatepicker = new AirDatepicker(finishInput, {
@@ -36,9 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
           selectedDates.start = null;
           startInput.value = '';
         }
+        finishDatepicker.hide();
       }
     },
     isMobile: false,
+    onShow: () => {
+      startDatepicker.hide();
+    },
   });
 
   document.querySelectorAll('.plus-icon').forEach((icon) => {
@@ -57,5 +65,23 @@ document.addEventListener('DOMContentLoaded', () => {
         datepicker.show();
       }
     });
+  });
+
+  [startInput, finishInput].forEach((input) => {
+    input.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const isStart = input === startInput;
+      const datepicker = isStart ? startDatepicker : finishDatepicker;
+      datepicker.show();
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    const isClickInside = e.target.closest('.calendar_input_wrapper') || 
+                          e.target.closest('.air-datepicker');
+    if (!isClickInside) {
+      startDatepicker.hide();
+      finishDatepicker.hide();
+    }
   });
 });
