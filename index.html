@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Monblanproject - галерея изображений с статистикой лайков и комментариев">
+  <title>Monblanproject</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.4.0/air-datepicker.min.css">
+</head>
+
+<body>
+  <img class="bg_1" src="./assets/images/bg-1.webp" alt="" loading="lazy" aria-hidden="true">
+  <img class="bg_2" src="./assets/images/bg-2.webp" alt="" loading="lazy" aria-hidden="true">
+  <header>
+    <img class="header_logo" src="./assets/images/logo.webp" alt="logo">
+
+    <div class="header_block">
+      <div class="header_top">
+        <div class="header_title">monblanproject</div>
+        <div class="header_label">Start on 17-02-2016</div>
+      </div>
+
+      <ul class="achievements">
+        <li class="achievements_item">
+          <span>870</span> posts
+        </li>
+        <li class="achievements_item">
+          <span>11,787</span> followers
+        </li>
+        <li class="achievements_item">
+          <span>112</span> following
+        </li>
+      </ul>
+
+      <div class="header_calendar">
+        <div class="calendar_title">Date</div>
+        <div class="calendar_range">
+          <div class="calendar_input_wrapper">
+            <input type="text" class="calendar_range_start" placeholder="from" readonly>
+            <span class="plus-icon"></span>
+            <span class="icon-divider"></span>
+            <span class="calendar-icon"></span>
+          </div>
+          <div class="calendar_input_wrapper">
+            <input type="text" class="calendar_range_finish" placeholder="to" readonly>
+            <span class="plus-icon"></span>
+            <span class="icon-divider"></span>
+            <span class="calendar-icon"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <section class="main_icons">
+        <div class="button_net" id="gridViewIcon" role="button" aria-label="Переключить на вид сеткой" tabindex="0">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+        <div class="button_list active" id="listViewIcon" role="button" aria-label="Переключить на вид списком"
+          tabindex="0">
+          <div class="button_row">
+            <div class="square"></div>
+            <div class="line"></div>
+          </div>
+          <div class="button_row">
+            <div class="square"></div>
+            <div class="line"></div>
+          </div>
+          <div class="button_row">
+            <div class="square"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <ul class="cards" id="cardsList">
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/5.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/2.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/9.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/4.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/7.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/1.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/6.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/8.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+          <li class="card">
+            <div class="card_image">
+              <img src="./assets/images/3.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_stats">
+              <div class="stat stat--current">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+              <div class="upload_info">
+                <div class="upload_info_header">
+                  <h3 class="upload_info_title">Image upload</h3>
+                </div>
+                <p class="upload_info_date">11-04-2016</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="cards_net" id="cardsGrid" style="display: none;">
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/5.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/2.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/9.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/4.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/7.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/1.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/6.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+          <li class="card_net">
+            <div class="card_net_image">
+              <img src="./assets/images/8.webp" alt="user image" loading="lazy">
+            </div>
+            <div class="card_net_stats">
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">Today</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="likes" class="metric_icon">
+                    <span class="metric_value">128</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="comments" class="metric_icon">
+                    <span class="metric_value">31</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stat_net">
+                <div class="stat_header">
+                  <h3 class="stat_title">9-08-2016</h3>
+                </div>
+                <div class="stat_net_metrics">
+                  <div class="metric metric--likes">
+                    <img src="./assets/icons/heart.webp" alt="Лайки" class="metric_icon">
+                    <span class="metric_value">67</span>
+                  </div>
+                  <div class="metric metric--comments">
+                    <img src="./assets/icons/comment.webp" alt="Комментарии" class="metric_icon">
+                    <span class="metric_value">22</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="upload_info_net">
+              <div class="upload_info_net_header">
+                <h3 class="upload_info_title">Image upload</h3>
+              </div>
+              <p class="upload_info_date">11-04-2016</p>
+            </div>
+          </li>
+        </ul>
+        <button class="load_more">LOAD MORE</button>
+      </section>
+    </div>
+  </main>
+  <footer></footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.4.0/air-datepicker.min.js" defer></script>
+  <script src="./js/datepicker.js" defer></script>
+  <script src="./js/viewToggle.js" defer></script>
+</body>
+
+</html>
